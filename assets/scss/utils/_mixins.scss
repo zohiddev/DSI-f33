@@ -1,0 +1,15 @@
+@mixin flex($align, $justify){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin trn($s: 0.2){
+    transition: all #{$s}s ease-in-out;
+}
+
+@mixin media($width){
+    @media screen and (max-width: #{$width}px) {
+        @content;
+    }
+}

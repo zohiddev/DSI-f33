@@ -1,0 +1,81 @@
+.header {
+    position: relative;
+    padding: 22px 0;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+    background-color: $white-color;
+    @include trn();
+    z-index: 1000;
+
+    @include media(768) {
+        padding: 11px 0;
+    }
+
+    &-row {
+        @include flex(center, space-between);
+    }
+
+    &-nav {
+        @include media(768) {
+            display: none;
+        }
+    }
+
+    &-link {
+        font-family: $main-font;
+        font-weight: 400;
+        font-size: 18px;
+        color: $nav-link-color;
+        @include trn();
+
+        &:not(:last-child) {
+            margin-right: 50px;
+
+            @include media(1000) {
+                margin-right: 20px;
+            }
+        }
+
+        &:hover,
+        &.active {
+            color: $red-color;
+        }
+
+
+    }
+
+    &-button {
+        @include trn();
+
+        path {
+            @include trn();
+
+        }
+
+        &:not(:last-child) {
+            margin-right: 24px;
+
+            @include media(900) {
+                margin-right: 12px;
+            }
+        }
+
+        &:hover path {
+            fill: $red-color;
+        }
+
+
+        &s {
+            @include media(768) {
+                display: none;
+            }
+        }
+    }
+
+    &-mobile {
+        display: none;
+
+        @include media(768) {
+            display: block;
+        }
+    }
+}

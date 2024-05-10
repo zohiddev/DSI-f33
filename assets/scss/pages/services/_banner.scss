@@ -1,0 +1,23 @@
+.services-page .banner {
+    position: relative;
+    height: 400px;
+    background-image: url(../../../../images/services/banner/banner-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -70px;
+
+    @include media(768){
+        height: 330px;
+        background-position: center top;
+    }
+
+    &-title {
+        font-weight: 400;
+        text-align: center;
+    }
+
+    &-content{
+        position: relative;
+        margin: 0 auto;
+    }
+}

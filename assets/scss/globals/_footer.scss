@@ -1,0 +1,111 @@
+.footer {
+    &-top {
+        padding: 24px 0;
+    }
+
+    &-bottom {
+        background-color: $red-color;
+        padding: 20px 0;
+        text-align: center;
+
+        &__text {
+            font-family: $main-font;
+            font-weight: 400;
+            font-size: 18px;
+            color: $white-color;
+        }
+    }
+
+
+    &-row {
+        @include flex(center, space-between);
+
+        @include media(900){
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+        @include media(768){
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: unset;
+        }
+    }
+
+    &-about {
+        max-width: 30%;
+        font-family: $main-font;
+        font-size: 18px;
+        color: $footer-text-color;
+
+        @include media(900){
+            max-width: 40%;
+        }
+
+        @include media(768){
+            max-width: 100%;
+        }
+
+        &__text {
+            display: block;
+            margin: 8px 0;
+            font-weight: 500;
+        }
+
+        &__address {
+            font-weight: 300;
+            line-height: 149%;
+        }
+    }
+
+    &-contact {
+        font-family: $main-font;
+        color: $footer-text-color;
+
+        
+        @include media(768){
+            max-width: 100%;
+        }
+
+        &__nav{
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        &__link {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 149%;
+
+            &:hover{
+                text-decoration: underline;
+                color: $red-color;
+            }
+        }
+    }
+
+    &-brands{
+        max-width: 418px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 16px;
+
+
+        @include media(1000){
+            max-width: 360px;
+        }
+
+        @include media(900){
+            max-width: 100%;
+        }
+    }
+}
